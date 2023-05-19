@@ -38,6 +38,7 @@ namespace ZikrMatic_v1
         private void recEngne_SpechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
             string result = e.Result.Text;
+            resultLbl.Text += result + ", ";
 
             if (result == "Allah" || result == "Hello Kabil" || result == "What time is it"|| result == "Open google"|| result == "Open my gmail"||
                 result == "Close Google Chrome"|| result == "Open my folder"|| result == "Close My Folder"|| result == "Play My Music"||
@@ -77,7 +78,7 @@ namespace ZikrMatic_v1
 
                 if (result == "Open my folder")
                 {
-                    System.Diagnostics.Process.Start(@"C:\Users\GabilGG\Documents\CodeWorks");
+                    System.Diagnostics.Process.Start(@"D:\Codes\gitProjects");
                     result = "Folder Opening";
                 }
 
@@ -93,7 +94,7 @@ namespace ZikrMatic_v1
 
                 if (result == "Play My Music")
                 {
-                    music.SoundLocation = @"C:\Users\GabilGG\Downloads\Music\[MP3DOWNLOAD.TO] [OFFICIAL VIDEO] Hallelujah - Pentatonix-HQ.wav";
+                    music.SoundLocation = @"C:\Users\user\Desktop\[MP3DOWNLOAD.TO] [OFFICIAL VIDEO] Hallelujah - Pentatonix-HQ.wav";
                     music.Play();
                     result = "";
                 }
